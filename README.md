@@ -5,12 +5,12 @@ to make the ember-data hasMany relationship work.
 
 ## Branches
 
-* example-no-serialier
+* __example-no-serialzier:__
 A parent/child setup using ember-date belongsTo/hasMany. Objects are saved
 and displayed in the templates, but not persisted to PouchDB.
-* example-with-serializer
+* __example-with-serializer:__
 Addition of 'serializers/application.js' containing:
-```
+```javascript
 import { Serializer } from 'ember-pouch';
 export default Serializer.extend();
 ```
