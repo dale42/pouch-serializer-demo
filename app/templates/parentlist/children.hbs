@@ -1,0 +1,18 @@
+<p><strong>templates/guides/children.hbs</strong></p>
+<h3>Children of {{model.name}}</h3>
+
+<ul>
+  {{#each model.children as |child|}}
+    <li>
+      {{child.name}}
+      <button {{action "deleteChild" child.id }}>Delete</button>
+    </li>
+  {{/each}}
+</ul>
+
+<div>
+  Name: {{input type="text" value=childName}}<br>
+  <button {{action "addChild" childName}} >Add Child</button>
+</div>
+
+{{outlet}}

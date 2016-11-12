@@ -1,0 +1,18 @@
+<h1>Parents</h1>
+<hr>
+<ul>
+  {{#each model as |parent|}}
+    <li>
+      {{#link-to "parentlist.children" parent.id}} {{parent.name}}{{/link-to}}
+      <button {{action "deleteParent" parent.id }}>Delete</button>
+    </li>
+  {{/each}}
+</ul>
+<div>
+  Add Parent: {{input type="text" value=parentName}}
+  <button {{action "addParent"}} >Add</button>
+</div>
+
+<hr>
+<hr>
+{{outlet}}
